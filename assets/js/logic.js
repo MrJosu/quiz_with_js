@@ -50,12 +50,63 @@ currentQuestion.options.forEach(function(options, index){
     let optionsButton = document.createElement("button");
     optionsButton.setAttribute("class","choice");
     optionsButton.setAttribute("value",choice);
-    optionsButton.textContent = `${index + 1}. ${choice}`
+    optionsButton.textContent = `${index + 1}. ${options}`
     optionsButton.addEventListener("click", questionList);
     optionsSelection.append(optionsButton);
 })
 }
+function quizFinish(){
+    clearInterval(timerCounter);
 
+    let endScreenElement = document.getElementById("end-screen");
+    endScreenElement.removeAttribute("class");
+
+    let finalResult = document.getElementById("final-score");
+    finalResult.textContent = time;
+
+    questionsOptions.setAttribute("class", "hide");
+}
+function clock(){
+    time--;
+    timer.textContent = time;
+    if(time <=0){
+        quizFinish();
+    }
+}
+function startQuiz(){
+    let quizStartScreen = document.getElementById("start-screen");
+    quizStartScreen.setAttribute("class","hide");
+    questionsOptions.removeAttribute("class");
+    timerCounter = setInterval(clock, 1000);
+    timer.textContent = time;
+    grabQuestion();
+}
+function saveScores(){
+    let initials = playerInitials.value.trim();
+    
+    if(initials !== ""){
+        let results = JSON.parse(localStorage.getItem("highscores")) || [];
+        let newResult = {
+            score: time,
+            initials: initials
+        }
+
+        results.push(newResult);
+        localStorage.setItem("highscores",JSON.stringify(results));
+
+        window.location.href = "highscores.html";
+    }
+}
+function quizStartCheck(event){
+    if(event.key === "Enter"){
+        saveScores();
+    }
+}
+startButton.addEventListener("click", startQuiz);
+
+submitButton.addEventListener("click", saveScores);
+
+initialElement.addEventListener("keyup", quizStartCheck);
 
 
 
