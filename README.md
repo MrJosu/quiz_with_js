@@ -1,88 +1,55 @@
 # Module 6 Challenge Web APIs: Code Quiz
 
-## Your Task
+## Description
 
-As you proceed in your journey to becoming a front-end web developer, it’s likely that you’ll be asked to complete a coding assessment, perhaps as part of an interview process. A typical coding assessment is a combination of multiple-choice questions and interactive coding challenges. 
+This repo is created for module 6 Challenge, in this challenge I was using <b>JavaScript</b> and I was working with provided HTML tempate to create webpage where visitors can play JS related quiz.
+I wrote JavaScript code that has set of 5 question related to <b>JavaScript</b> .
+<ul>
+<li>Webpage has a timer with preset of 8 seconds to answer the question, in total 40 seconds.
+<li>Timer starts when question presents
+<li>After player answered question, player will receive next question to answer
+<li>When player asnwer correctly or incorrectly relevant sound will play. P.S. don't be scarred ^^
+<li>Timer deducts 10 seconds if player answers incorrectly
+<li>If players time goes to 0, quiz ends
+<li>When game ends, player can put his/her initials to save score
+<li>Player can clear highscores in any time.
 
-To help you become familiar with these tests and give you a chance to apply the skills from this module, this week’s challenge invites you to build a timed coding quiz with multiple-choice questions. This app will run in the browser, and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean, polished, and responsive user interface. This week’s coursework has taught you all the skills you need to succeed in this challenge.
+## Repo url
 
+https://github.com/MrJosu/quiz_with_js
 
-## User Story
+## Deployed repo url
 
-```
-AS A coding boot camp student
-I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
-SO THAT I can gauge my progress compared to my peers
-```
+https://mrjosu.github.io/quiz_with_js/
 
-## Acceptance Criteria
-
-Create a code quiz that contains the following requirements:
-
-* A start button that when clicked a timer starts and the first question appears.
- 
-  * Questions contain buttons for each answer.
-  * 
-  * When answer is clicked, the next question appears
-  * 
-  * If the answer clicked was incorrect then subtract time from the clock
-
-* The quiz should end when all questions are answered or the timer reaches 0.
-
-  * When the game ends, it should display their score and give the user the ability to save their initials and their score
-  
-## Mock-Up
-
-The following animation demonstrates the application functionality:
-
-![Animation of code quiz. Presses button to start quiz. Clicks the button for the answer to each question, displays if answer was correct or incorrect. Quiz finishes and displays high scores. User adds their intials, then clears their intials and starts over.](./assets/08-web-apis-challenge-demo.gif)
-
-## Grading Requirements
-
-This challenge is graded based on the following criteria: 
-
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the above acceptance criteria.
-
-### Deployment: 32%
-
-* Application deployed at live URL.
-
-* Application loads with no errors.
-
-* Application GitHub URL submitted.
-
-* GitHub repository that contains application code.
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application resembles the mock-up functionality provided in the challenge instructions.
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality README file with description, screenshot, and link to deployed application.
+## Instructions
 
 
-## Review
+<br>Please open deployed repo url and press "Start quiz"
+<ul>
+<li>You will receive first question
 
-You are required to submit BOTH of the following for review:
+<li>Please answer this question and the following questions to get your score. Note: If your time will be finished before questions will end, quiz will end.
 
-* The URL of the functional, deployed application.
+<li>After you answered all questions, you can put your initials and save highscores.
 
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
+<li>You can clear highscores in the end of quiz or by pressing "View Highscores" and after "Clear High Scores"
 
----
-© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+<li>Good luck!
+</ul>
+
+## Installation
+
+Not required
+
+## Credits
+
+N/A
+
+## Tests
+
+Tested in Google Chrome/Edge browsers
+
+## Licence
+
+MIT License
