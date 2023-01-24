@@ -22,7 +22,7 @@ let questions =
     },
     {
         "title": "How to add JavaScript in your HTML?",
-        "coptions": ['script src="script.js"','script url ="script.js"','script href="script.js"','img src="script.js"'],
+        "options": ['script src="script.js"','script url ="script.js"','script href="script.js"','img src="script.js"'],
         "answer": 'script src="script.js"'
     }
 ]

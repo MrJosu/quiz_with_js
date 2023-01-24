@@ -24,6 +24,7 @@ function questionList(){
 
      comment.textContent = "Unfortunately this is an incorrect answer :("
      sfxIncorrect.play();
+    } else {
      sfxCorrect.play();
      comment.textContent = "Well done! This is a correct answer";
     }
@@ -46,13 +47,15 @@ let questionTitle = document.getElementById("question-title");
 questionTitle.textContent = currentQuestion.title;
 optionsSelection.innerHTML = "";
 
-currentQuestion.options.forEach(function(options, index){
+currentQuestion.options.forEach(function(selection, index){
     let optionsButton = document.createElement("button");
-    optionsButton.setAttribute("class","choice");
-    optionsButton.setAttribute("value",choice);
-    optionsButton.textContent = `${index + 1}. ${options}`
+    optionsButton.setAttribute("class", "choice");
+    optionsButton.setAttribute("value", selection);
+    optionsButton.textContent = `${index + 1}. ${selection}`
     optionsButton.addEventListener("click", questionList);
     optionsSelection.append(optionsButton);
+    
+
 })
 }
 function quizFinish(){
