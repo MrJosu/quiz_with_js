@@ -1,5 +1,5 @@
 let timerCounter;
-let time = questions.length *15; 
+let time = questions.length *8; 
 let currentQuestionCounter = 0;
 
 let sfxCorrect = new Audio("assets/sfx/correct.wav");
